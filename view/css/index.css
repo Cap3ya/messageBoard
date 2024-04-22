@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    padding: 1em;
+    font-family: sans-serif;
+
+    gap: 5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    gap: 5em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    width: 100%;
+    max-width: 1000px;
+
+    & form {
+        flex: 0 0 300px;
+    }
+    & ul {
+        flex: 1 0 600px;
+    }
+}
+
+/* Heading */
+header {
+    & h1, h2 {
+        text-align: center;
+    }
+    h2 {
+        font-weight: 500;
+    }
+}
+
+
+/* Style for the form container */
+.form-container {
+    width: 400px;
+}
+
+/* Style for form input fields */
+.form-input {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+/* Style for the submit button */
+.submit-button {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #45a049;
+}
+
+.errors {
+    color: red;
+    font-size: small;
+}
+
+#nbCharsLeft-container {
+    text-align: right;
+    font-size: smaller;
+    width: 100%;
+}
+
+/* Style for message board */
+.message-board {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Style for each message */
+.message {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+/* Style for message sender's fullname */
+.sender {
+    font-weight: bold;
+}
+
+/* Style for message sender's email */
+.email {
+    color: #999;
+    font-size: 0.9em;
+}
+
+/* Style for message content */
+.content {
+    margin-top: 5px;
+}

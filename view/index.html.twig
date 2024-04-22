@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message Board</title>
+    <link rel="stylesheet" href="./view/css/index.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Message board</h1>
+        <h2>Share your thoughts</h2>
+    </header>
+
+    <main>
+
+        <form method="post" class="form-container">
+            <label>First Name</label>
+            <span class="errors" id="error_firstName"></span>
+            <input type="text" name="firstName" class="form-input">
+            <label>Last Name</label>
+            <span class="errors" id="error_lastName"></span>
+            <input type="text" name="lastName" class="form-input">
+            <label>Email</label>
+            <span class="errors" id="error_email"></span>
+            <input type="email" name="email" class="form-input">
+            <label>Message</label>
+            <span class="errors" id="error_message"></span>
+            <textarea name="message" class="form-input" minlength="10" maxlength="140" rows="5"></textarea>
+            <p id="nbCharsLeft-container"><span id="nbCharsLeft">140 chars</span> left</p>
+            <input type="submit" value="Submit" class="submit-button">
+            <p id="status">{{status}}</p>
+        </form>
+
+        <ul class="message-board">
+            {% for message in messages %}  
+                <li class="message">
+                    <p class="sender">{{message.getFullName}}</p>
+                    <p class="email">{{message.getEmail}}</p>
+                    <p class="content">{{message.getMessage}}</p>
+                </li>
+            {% endfor %}
+        </ul>
+
+    </main>
+
+    <script src="./view/js/index.js"></script>
+    
+</body>
+
+</html>
